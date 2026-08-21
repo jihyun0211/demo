@@ -1,0 +1,28 @@
+{
+  "id": "clear-auditable-radiology-foundation-model",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": [
+    "Tianyu Han",
+    "Riga Wu",
+    "Yu Tian",
+    "Firas Khader",
+    "Lisa C. Adams",
+    "Keno K. Bressem",
+    "Christos Davatzikos",
+    "Jakob Nikolas Kather",
+    "Li Shen",
+    "David A. Mankoff",
+    "Eduardo Mortani Barbosa",
+    "Daniel Truhn"
+  ],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "모델 해석가능성"],
+  "takeaway": "대규모 다기관 흉부 X-ray 데이터로 학습한 개념 기반 파운드모델이 4개 대륙 데이터셋 외부검증에서 최고 수준 분류 성능과 함께 예측 근거를 세부 소견 단위로 분해해 제시할 수 있음을 보였다.",
+  "relevance": "우리 코호트도 5개 기관(INST01~05)에서 수집된 272건의 다중 라벨 흉부 X-ray로 구성되어 있고 No Finding 외에 Infiltration, Atelectasis, Effusion 등 소견이 중첩되는 경우가 많아, 기관 간 표현 차이와 소견 조합의 해석가능성이 실제 진단 워크플로우에서 중요한 이슈로 보인다.", 
+  "caveat": "우리 데이터는 272건, 5개 기관 규모로 CLEAR가 검증한 4개의 대형 다국가 코호트와 규모 차이가 커서, 소규모·단일 국가 데이터에서 동일한 개념 기반 해석이 재현되는지는 이 데이터만으로 확인할 수 없다.",
+  "check": "우리 코호트의 기관별 No Finding 비율과 소견 조합 패턴 차이가 CLEAR류 개념 임베딩에서 기관 간 혼란요인(confounder)으로 나타나는지 확인해볼 가치가 있다."
+}
