@@ -1,0 +1,28 @@
+{
+  "id": "cf2seg-clinical-findings-guided-segmentation",
+  "title": "Grounding Radiology Report Findings into Medical Image Segmentation",
+  "authors": [
+    "Suyang Xi",
+    "Songtao Hu",
+    "Shansong Wang",
+    "Hong Ding",
+    "Yuheng Li",
+    "Wenfeng He",
+    "Kuo Zhang",
+    "Luke del Balzo",
+    "Chong Zhong",
+    "Mingzhe Hu",
+    "Catherine C. Liu",
+    "Yunhao Liu"
+  ],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-03051-0",
+  "abstract": "Routine radiology practice documents abnormalities primarily in narrative reports rather than pixel-level annotations. However, many clinically important analyses require spatially localized evidence. This mismatch limits the reuse of large-scale image-report archives for spatially resolved quantitative analysis, as heterogeneous clinical findings cannot be directly translated into consistent spatial representations. We therefore present Clinical-Findings-Guided Segmentation (CF2Seg), a chest X-ray segmentation framework that learns spatial representations directly from full radiology findings. We further curate a multi-source benchmark comprising 53,386 examinations, each paired with expert spatial annotations and corresponding reports across diverse thoracic pathologies and institutions. CF2Seg uses a dual-stage text–image fusion strategy in which report findings guide feature formation and are revisited during decoding to improve boundary delineation across scales. On a unified multi-source benchmark, CF2Seg achieves strong overall performance and remains stable under clinically realistic variation, including distribution shift, annotation scarcity, and clinically realistic image and report perturbations. Beyond segmentation accuracy, CF2Seg-derived masks preserve proportional lesion-burden trends with strong agreement to expert annotations, supporting retrospective spatial annotation and quantitative reuse of large-scale clinical image–report archives.",
+  "axes": ["기관 간 일반화", "라벨 잡음"],
+  "takeaway": "여러 기관의 소견 텍스트만으로도 흉부 X-ray 병변의 공간적 분할이 가능하며, 분포 변화와 주석 부족, 보고서 잡음이 있는 조건에서도 안정적인 성능을 유지했다.",
+  "relevance": "우리 데이터셋은 픽셀 단위 주석 없이 findings_label과 report_text만 존재하는 다기관(5개 기관) 흉부 X-ray 272건으로, 소견 조합(Effusion|Infiltration 등)이 흔해 라벨 잡음과 병변 중첩이 실제 문제로 보이며, 텍스트 기반 분할 프레임워크의 적용 가능성을 검토할 근거가 된다.",
+  "caveat": "우리 코호트에는 픽셀 단위 전문가 주석이 없어 CF2Seg가 보고한 것과 같은 분할 정확도나 병변 부담(lesion-burden) 일치도를 직접 재현·검증할 수 없다.",
+  "check": "우리 report_text의 소견 문구만으로 병변 위치를 근사 추정했을 때, 실제 view_position(PA/AP)별로 분할 안정성에 차이가 나는지 확인해볼 만하다."
+}
